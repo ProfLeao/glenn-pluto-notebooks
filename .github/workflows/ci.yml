@@ -38,6 +38,8 @@ jobs:
               using Pkg
               Pkg.add(["Glenn", "Pluto", "Plots", "DataFrames", "Roots"])
           '
+
+      - name: Test notebooks with Pluto
         run: |
           julia --project -e '
               using Pluto
