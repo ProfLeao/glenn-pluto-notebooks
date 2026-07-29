@@ -100,7 +100,20 @@ julia --project -e '
 
 ---
 
-## 📖 Documentation
+## � Pre-Rendered Outputs
+
+For quick browsing **without opening Pluto**, pre-rendered static HTML versions
+with visible outputs are available in the [`rendered/`](rendered/) directory.
+
+Regenerate after editing notebooks:
+
+```bash
+julia --project scripts/render.jl
+```
+
+---
+
+## �📖 Documentation
 
 Full documentation generated with **Documenter.jl** + **Literate.jl** available at:
 [profleao.github.io/glenn-pluto-notebooks](https://profleao.github.io/glenn-pluto-notebooks/stable/)
@@ -115,6 +128,12 @@ glenn-pluto-notebooks/
 │   ├── pt-br/                    # Portuguese version (11 topics)
 │   ├── en/                        # English version (11 topics)
 │   └── es/                        # Spanish version (11 topics)
+├── rendered/                      # Pre-rendered static HTML with visible outputs
+│   ├── pt-br/
+│   ├── en/
+│   └── es/
+├── scripts/
+│   └── render.jl                  # Pluto → HTML render script
 ├── data/                          # Auxiliary data
 ├── images/                        # README figures
 ├── docs/
