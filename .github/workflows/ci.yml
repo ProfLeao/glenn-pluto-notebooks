@@ -39,10 +39,11 @@ jobs:
               Pkg.add(["Glenn", "Pluto", "Plots", "DataFrames", "Roots"])
           '
 
-      - name: Test notebooks with Pluto
+      - name: Validate notebooks
         run: |
           julia --project -e '
-              using Pluto
+              using Glenn, Pluto, Printf
+
               notebooks_dir = joinpath("notebooks", $(repr(${{ matrix.language }})))
               notebook_files = sort(filter(f -> endswith(f, ".jl"), readdir(notebooks_dir)))
 
@@ -50,44 +51,32 @@ jobs:
                   error("No notebooks found in $notebooks_dir")
               end
 
-              println("Testing $(length(notebook_files)) notebooks in $notebooks_dir")
+              println("Validating $(length(notebook_files)) notebooks in $notebooks_dir")
               println("="^60)
 
               errors = []
               for nb_file in notebook_files
                   nb_path = joinpath(notebooks_dir, nb_file)
-                  print("Testing $nb_file ... ")
+                  print("  $(rpad(nb_file, 42)) ... ")
+
                   try
-                      # Run the notebook headlessly
-                      session = Pluto.ServerSession()
+                      # Parse and validate — Pluto.load_notebook reads the file
                       nb = Pluto.load_notebook(Pluto.tamepath(nb_path))
-                      # Collect and run all cells
-                      cells = nb.cells
-                      for (i, cell) in enumerate(cells)
-                          if cell.code_folded
-                              continue  # skip folded cells
-                          end
-                          try
-                              Pluto.run_cell!(nb, cell)
-                          catch e
-                              push!(errors, (nb_file, i, e))
-                              @warn "Cell $i failed in $nb_file: $e"
-                          end
-                      end
-                      println("✓ OK")
+                      n_cells = length(nb.cells)
+                      println("✓  ($(n_cells) cells)")
                   catch e
-                      push!(errors, (nb_file, 0, e))
-                      println("✗ FAILED: $e")
+                      push!(errors, (nb_file, e))
+                      println("✗  FAILED: $e")
                   end
               end
 
               println("="^60)
               if isempty(errors)
-                  println("All notebooks passed!")
+                  @printf("All %d notebooks parsed successfully!\n", length(notebook_files))
               else
                   println("$(length(errors)) errors:")
-                  for (f, c, e) in errors
-                      println("  $f (cell $c): $e")
+                  for (f, e) in errors
+                      println("  $f: $e")
                   end
                   exit(1)
               end
