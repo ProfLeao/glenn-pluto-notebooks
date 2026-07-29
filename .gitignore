@@ -1,0 +1,23 @@
+# Pluto notebook state files
+*.jl.*.pluto_state
+
+# Julia compiled files
+*.jl.cov
+*.jl.mem
+Manifest.toml
+
+# Documentation build
+docs/build/
+docs/_build/
+
+# Data files
+data/*.db
+data/*.csv
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/

@@ -1,0 +1,12 @@
+[deps]
+Documenter = "e30172f5-a6a5-5a46-863b-614d45cd2de4"
+Literate = "98b081ad-f1c9-55d3-8b20-4c87d4299306"
+Glenn = "0c9e4e6f-9b8a-4e7d-9c1f-8e2b5a3d7f6e"
+Pluto = "c3e4b5f8-9d1a-4e6b-8c2f-3a4d5e6f7g8h"
+
+[compat]
+Documenter = "1"
+Literate = "2"
+Glenn = "0.3"
+Pluto = "0.19"
+julia = "1.9"
