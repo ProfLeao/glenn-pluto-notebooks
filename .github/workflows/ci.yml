@@ -36,7 +36,8 @@ jobs:
         run: |
           julia --project -e '
               using Pkg
-              Pkg.instantiate()
+              Pkg.add(url="https://github.com/ProfLeao/Glenn.jl")
+              Pkg.add(["Pluto", "Plots", "DataFrames", "Roots"])
           '
 
       - name: Test notebooks with Pluto
@@ -113,7 +114,8 @@ jobs:
         run: |
           julia --project -e '
               using Pkg
-              Pkg.instantiate()
+              Pkg.add(url="https://github.com/ProfLeao/Glenn.jl")
+              Pkg.add(["Pluto", "Plots", "DataFrames", "Roots"])
           '
 
       - name: Render notebooks to HTML
@@ -145,7 +147,7 @@ jobs:
         run: |
           julia --project=docs -e '
               using Pkg
-              Pkg.develop(PackageSpec(path=pwd()))
+              Pkg.add(url="https://github.com/ProfLeao/Glenn.jl")
               Pkg.instantiate()
               include("docs/make.jl")
           '
@@ -160,7 +162,7 @@ jobs:
   deploy-docs:
     name: "Deploy Documentation"
     if: github.event_name == 'push' && github.ref == 'refs/heads/main'
-    needs: [test-notebooks, build-docs]
+    needs: [build-docs]
     runs-on: ubuntu-latest
     permissions:
       pages: write

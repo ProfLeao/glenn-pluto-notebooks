@@ -1,8 +1,29 @@
 ### A Pluto.jl notebook ###
-# v0.19.46
+# v1.0.3
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ 01000000-0000-0000-0000-000000000004
+begin
+    using Glenn
+    using Printf
+    using DataFrames
+end
+
+# ╔═╡ 01000000-0000-0000-0000-000000000029
+begin
+    using Glenn:
+        ThermoCalcError,
+        DatabaseNotConnectedError,
+        SpeciesNotFoundError,
+        TemperatureOutOfRangeError
+
+    println("=== Hierarquia de Exceções ===")
+    for exc in (DatabaseNotConnectedError, SpeciesNotFoundError, TemperatureOutOfRangeError)
+        println("  $(rpad(string(exc), 30)) é um ThermoCalcError? $(exc <: ThermoCalcError)")
+    end
+end
 
 # ╔═╡ 01000000-0000-0000-0000-000000000001
 md"""
@@ -60,13 +81,6 @@ Pkg.add("Plots")
 Pkg.add("DataFrames")
 ```
 """
-
-# ╔═╡ 01000000-0000-0000-0000-000000000004
-begin
-    using Glenn
-    using Printf
-    using DataFrames
-end
 
 # ╔═╡ 01000000-0000-0000-0000-000000000005
 md"""
@@ -321,20 +335,6 @@ Glenn.jl define uma hierarquia de exceções para tratamento elegante de erros:
 - `TemperatureOutOfRangeError` — temperatura fora do intervalo válido
 """
 
-# ╔═╡ 01000000-0000-0000-0000-000000000029
-begin
-    using Glenn:
-        ThermoCalcError,
-        DatabaseNotConnectedError,
-        SpeciesNotFoundError,
-        TemperatureOutOfRangeError
-
-    println("=== Hierarquia de Exceções ===")
-    for exc in (DatabaseNotConnectedError, SpeciesNotFoundError, TemperatureOutOfRangeError)
-        println("  $(rpad(string(exc), 30)) é um ThermoCalcError? $(exc <: ThermoCalcError)")
-    end
-end
-
 # ╔═╡ 01000000-0000-0000-0000-000000000030
 md"""
 ### Capturando erros com `try/catch`
@@ -394,4 +394,39 @@ da NASA** que alimentam esses cálculos.
 md"""
 ---
 *Glenn.jl v$(Glenn.__version__) — $(Glenn.__author__)*
-"""
+""
+
+# ╔═╡ Cell order:
+# ╠═01000000-0000-0000-0000-000000000001
+# ╠═01000000-0000-0000-0000-000000000002
+# ╠═01000000-0000-0000-0000-000000000003
+# ╠═01000000-0000-0000-0000-000000000004
+# ╠═01000000-0000-0000-0000-000000000005
+# ╠═01000000-0000-0000-0000-000000000006
+# ╠═01000000-0000-0000-0000-000000000007
+# ╠═01000000-0000-0000-0000-000000000008
+# ╠═01000000-0000-0000-0000-000000000009
+# ╠═01000000-0000-0000-0000-000000000010
+# ╠═01000000-0000-0000-0000-000000000011
+# ╠═01000000-0000-0000-0000-000000000012
+# ╠═01000000-0000-0000-0000-000000000013
+# ╠═01000000-0000-0000-0000-000000000014
+# ╠═01000000-0000-0000-0000-000000000015
+# ╠═01000000-0000-0000-0000-000000000016
+# ╠═01000000-0000-0000-0000-000000000017
+# ╠═01000000-0000-0000-0000-000000000018
+# ╠═01000000-0000-0000-0000-000000000019
+# ╠═01000000-0000-0000-0000-000000000020
+# ╠═01000000-0000-0000-0000-000000000021
+# ╠═01000000-0000-0000-0000-000000000022
+# ╠═01000000-0000-0000-0000-000000000023
+# ╠═01000000-0000-0000-0000-000000000024
+# ╠═01000000-0000-0000-0000-000000000025
+# ╠═01000000-0000-0000-0000-000000000026
+# ╠═01000000-0000-0000-0000-000000000027
+# ╠═01000000-0000-0000-0000-000000000028
+# ╠═01000000-0000-0000-0000-000000000029
+# ╠═01000000-0000-0000-0000-000000000030
+# ╠═01000000-0000-0000-0000-000000000031
+# ╠═01000000-0000-0000-0000-000000000032
+# ╠═01000000-0000-0000-0000-000000000033

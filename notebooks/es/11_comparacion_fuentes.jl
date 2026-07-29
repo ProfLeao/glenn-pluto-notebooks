@@ -1,8 +1,15 @@
 ### A Pluto.jl notebook ###
-# v0.19.46
+# v1.0.3
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ 11000000-0000-0000-0000-000000000002
+begin
+    using Glenn
+    using Printf
+    using DataFrames
+end
 
 # ╔═╡ 11000000-0000-0000-0000-000000000001
 md"""
@@ -15,13 +22,6 @@ diferentes fuentes:
 2. **NIST-JANAF** — Tablas termoquímicas de referencia (Chase, 1998)
 3. **Tablas convencionales** — Valores tabulados de libros de texto
 """
-
-# ╔═╡ 11000000-0000-0000-0000-000000000002
-begin
-    using Glenn
-    using Printf
-    using DataFrames
-end
 
 # ╔═╡ 11000000-0000-0000-0000-000000000003
 md"""
@@ -134,4 +134,15 @@ fundamentos hasta aplicaciones avanzadas.
 md"""
 ---
 *Glenn.jl v$(Glenn.__version__) — $(Glenn.__author__)*
-"""
+""
+
+# ╔═╡ Cell order:
+# ╠═11000000-0000-0000-0000-000000000001
+# ╠═11000000-0000-0000-0000-000000000002
+# ╠═11000000-0000-0000-0000-000000000003
+# ╠═11000000-0000-0000-0000-000000000004
+# ╠═11000000-0000-0000-0000-000000000005
+# ╠═11000000-0000-0000-0000-000000000006
+# ╠═11000000-0000-0000-0000-000000000007
+# ╠═11000000-0000-0000-0000-000000000008
+# ╠═11000000-0000-0000-0000-000000000009

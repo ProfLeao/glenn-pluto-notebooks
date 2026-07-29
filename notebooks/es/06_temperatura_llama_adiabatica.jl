@@ -1,8 +1,15 @@
 ### A Pluto.jl notebook ###
-# v0.19.46
+# v1.0.3
 
 using Markdown
 using InteractiveUtils
+
+# ╔═╡ 06000000-0000-0000-0000-000000000002
+begin
+    using Glenn
+    using Printf
+    using Roots
+end
 
 # ╔═╡ 06000000-0000-0000-0000-000000000001
 md"""
@@ -19,13 +26,6 @@ $$H_{\text{reactivos}}(T_0) = H_{\text{productos}}(T_{ad})$$
 Este cuaderno resuelve esta ecuación para varios combustibles, explorando el
 efecto de la **razón de equivalencia**, **precalentamiento** y **disociación**.
 """
-
-# ╔═╡ 06000000-0000-0000-0000-000000000002
-begin
-    using Glenn
-    using Printf
-    using Roots
-end
 
 # ╔═╡ 06000000-0000-0000-0000-000000000003
 md"""
@@ -162,4 +162,19 @@ En el [siguiente cuaderno](07_comparacion_biocombustibles.jl) compararemos
 md"""
 ---
 *Glenn.jl v$(Glenn.__version__) — $(Glenn.__author__)*
-"""
+""
+
+# ╔═╡ Cell order:
+# ╠═06000000-0000-0000-0000-000000000001
+# ╠═06000000-0000-0000-0000-000000000002
+# ╠═06000000-0000-0000-0000-000000000003
+# ╠═06000000-0000-0000-0000-000000000004
+# ╠═06000000-0000-0000-0000-000000000005
+# ╠═06000000-0000-0000-0000-000000000006
+# ╠═06000000-0000-0000-0000-000000000007
+# ╠═06000000-0000-0000-0000-000000000008
+# ╠═06000000-0000-0000-0000-000000000009
+# ╠═06000000-0000-0000-0000-000000000010
+# ╠═06000000-0000-0000-0000-000000000011
+# ╠═06000000-0000-0000-0000-000000000012
+# ╠═06000000-0000-0000-0000-000000000013
