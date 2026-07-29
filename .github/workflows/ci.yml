@@ -36,11 +36,8 @@ jobs:
         run: |
           julia --project -e '
               using Pkg
-              Pkg.add(url="https://github.com/ProfLeao/Glenn.jl")
-              Pkg.add(["Pluto", "Plots", "DataFrames", "Roots"])
+              Pkg.add(["Glenn", "Pluto", "Plots", "DataFrames", "Roots"])
           '
-
-      - name: Test notebooks with Pluto
         run: |
           julia --project -e '
               using Pluto
@@ -114,8 +111,7 @@ jobs:
         run: |
           julia --project -e '
               using Pkg
-              Pkg.add(url="https://github.com/ProfLeao/Glenn.jl")
-              Pkg.add(["Pluto", "Plots", "DataFrames", "Roots"])
+              Pkg.add(["Glenn", "Pluto", "Plots", "DataFrames", "Roots"])
           '
 
       - name: Render notebooks to HTML
@@ -147,7 +143,7 @@ jobs:
         run: |
           julia --project=docs -e '
               using Pkg
-              Pkg.add(url="https://github.com/ProfLeao/Glenn.jl")
+              Pkg.add("Glenn")
               Pkg.instantiate()
               include("docs/make.jl")
           '
