@@ -115,11 +115,12 @@ function generate_lang_index(lang_code)
     descs = data["descriptions"]
 
     for i in 1:length(files)
-        raw_url = "$GITHUB_BASE/blob/main/notebooks/$lang_code/$(files[i])"
+        raw_url = "https://raw.githubusercontent.com/ProfLeao/glenn-pluto-notebooks/main/rendered/$lang_code/$(replace(files[i], ".jl" => ".html"))"
+        preview_url = "https://htmlpreview.github.io/?$raw_url"
         desc = i <= length(descs) && !isempty(descs) ? descs[i] : ""
         desc_html = isempty(desc) ? "" : "<p>$desc</p>"
         push!(nb_items, """
-        <a href="$raw_url" class="nb-card">
+        <a href="$preview_url" class="nb-card">
             <h4><span class="num">$(lpad(i, 2, "0"))</span> $(titles[i])</h4>
             $desc_html
         </a>""")
