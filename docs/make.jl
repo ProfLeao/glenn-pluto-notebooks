@@ -47,6 +47,7 @@ const DOCS_SRC = joinpath(@__DIR__, "src")
 
 function generate_index(lang_dir, files, titles, lang_label, heading, description)
     index_path = joinpath(DOCS_SRC, lang_dir, "index.md")
+    mkpath(dirname(index_path))  # ensure directory exists
     open(index_path, "w") do io
         write(io, "# Glenn.jl — $lang_label\n\n")
         write(io, "$description\n\n")

@@ -44,7 +44,7 @@ jobs:
           julia --project -e '
               using Glenn, Pluto, Printf
 
-              notebooks_dir = joinpath("notebooks", $(repr(${{ matrix.language }})))
+              notebooks_dir = joinpath("notebooks", "${{ matrix.language }}")
               notebook_files = sort(filter(f -> endswith(f, ".jl"), readdir(notebooks_dir)))
 
               if isempty(notebook_files)
