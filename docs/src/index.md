@@ -94,60 +94,60 @@ julia --project -e 'import Pkg; Pkg.instantiate()'
 
 <div class="nb-grid">
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/01_getting_started.jl" class="nb-card">
 <h4><span class="num">01</span> Getting Started</h4>
 <p>Connecting, searching species, computing Cp/H/S, error handling</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/02_nasa_polynomials.jl" class="nb-card">
 <h4><span class="num">02</span> NASA Polynomials Under the Hood</h4>
 <p>Manual implementation of 9-term polynomials, API validation</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/03_property_curves.jl" class="nb-card">
 <h4><span class="num">03</span> Temperature-Dependent Property Curves</h4>
 <p>Cp(T), H(T), S(T) curves, equipartition, DataFrames tables</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/04_formation_enthalpy.jl" class="nb-card">
 <h4><span class="num">04</span> Enthalpy of Formation</h4>
 <p>ΔfH° via h_relative, validation against literature</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/05_reaction_enthalpies.jl" class="nb-card">
 <h4><span class="num">05</span> Reaction Enthalpies</h4>
 <p>ΔrH°, LHV/HHV, Kirchhoff's Law, Hess's Law</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/06_adiabatic_flame_temperature.jl" class="nb-card">
 <h4><span class="num">06</span> Adiabatic Flame Temperature</h4>
 <p>Energy balance for Tad, equivalence ratio, preheating</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/07_biofuel_comparison.jl" class="nb-card">
 <h4><span class="num">07</span> Comparing Fuels & Biofuels</h4>
 <p>Ethanol, methanol, gasoline: energy density, CO₂ intensity</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/08_equilibrium_gibbs.jl" class="nb-card">
 <h4><span class="num">08</span> Chemical Equilibrium & Gibbs Free Energy</h4>
 <p>ΔrG°, K, water-gas shift, van't Hoff, dissociation</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/09_brayton_cycle.jl" class="nb-card">
 <h4><span class="num">09</span> Brayton Gas-Turbine Cycle</h4>
 <p>Air-standard Brayton with real Cp(T), efficiency vs rp</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/10_property_provider.jl" class="nb-card">
 <h4><span class="num">10</span> Property Provider for CFD</h4>
 <p>Batch tables, cached coefficient provider, benchmark</p>
-</div>
+</a>
 
-<div class="nb-card">
+<a href="https://github.com/ProfLeao/glenn-pluto-notebooks/blob/main/notebooks/en/11_comparing_sources.jl" class="nb-card">
 <h4><span class="num">11</span> Comparing Thermodynamic Data Sources</h4>
 <p>NASA polynomials vs NIST vs conventional tables</p>
-</div>
+</a>
 
 </div>
 
