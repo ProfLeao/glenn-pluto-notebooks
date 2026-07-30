@@ -1,3 +1,13 @@
+/* ── Sidebar Logo ─────────────────────────────────────────────────── */
+#documenter .docs-sidebar .docs-logo {
+    text-align: center;
+    padding: 1em 1em 0.5em 1em;
+}
+#documenter .docs-sidebar .docs-logo img {
+    max-width: 160px;
+    height: auto;
+}
+
 /* ── Language Switcher ─────────────────────────────────────────────── */
 .lang-switcher {
     display: flex;

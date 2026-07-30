@@ -3,6 +3,8 @@
 [![CI](https://github.com/ProfLeao/glenn-pluto-notebooks/actions/workflows/ci.yml/badge.svg)](https://github.com/ProfLeao/glenn-pluto-notebooks/actions/workflows/ci.yml)
 [![Docs](https://img.shields.io/badge/docs-stable-blue.svg)](https://profleao.github.io/glenn-pluto-notebooks/stable/)
 
+<img src="images/logo.png" alt="Glenn PlutoLab logo" width="200">
+
 📖 **Documentation:** [profleao.github.io/glenn-pluto-notebooks](https://profleao.github.io/glenn-pluto-notebooks/)
 
 A collection of **11 interactive Pluto.jl notebooks** demonstrating the
