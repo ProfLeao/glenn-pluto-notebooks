@@ -10,7 +10,7 @@ const GITHUB_BASE = "https://github.com/ProfLeao/glenn-pluto-notebooks"
 
 const LANGS = Dict(
     "en" => Dict(
-        "sitename" => "Glenn PlutoLabbook — Thermochemical Worked Examples",
+        "sitename" => "Glenn.jl — PlutoLab",
         "label"    => "English",
         "heading"  => "Notebooks",
         "desc"     => "A collection of **11 interactive Pluto.jl notebooks** demonstrating the [Glenn.jl](https://github.com/ProfLeao/Glenn.jl) thermochemical properties calculator.",
@@ -42,7 +42,7 @@ const LANGS = Dict(
         ],
     ),
     "pt-br" => Dict(
-        "sitename" => "Glenn PlutoLabbook — Cadernos Pluto",
+        "sitename" => "Glenn.jl — PlutoLab",
         "label"    => "Português",
         "heading"  => "Cadernos",
         "desc"     => "Coleção de **11 cadernos interativos Pluto.jl** demonstrando a biblioteca [Glenn.jl](https://github.com/ProfLeao/Glenn.jl).",
@@ -61,7 +61,7 @@ const LANGS = Dict(
         "descriptions" => [],
     ),
     "es" => Dict(
-        "sitename" => "Glenn PlutoLabbook — Cuadernos Pluto",
+        "sitename" => "Glenn.jl — PlutoLab",
         "label"    => "Español",
         "heading"  => "Cuadernos",
         "desc"     => "Colección de **11 cuadernos interactivos Pluto.jl** que demuestran la biblioteca [Glenn.jl](https://github.com/ProfLeao/Glenn.jl).",
@@ -129,7 +129,7 @@ function generate_lang_index(lang_code)
     switcher = lang_switcher_html(lang_code)
 
     open(index_path, "w") do io
-        write(io, """# Glenn PlutoLabbook — Thermochemical Worked Examples
+        write(io, """# Glenn.jl — PlutoLab
 
 ```@raw html
 $switcher
