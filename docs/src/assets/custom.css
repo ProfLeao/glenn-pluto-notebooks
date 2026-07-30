@@ -1,26 +1,32 @@
 /* ── Language Switcher ─────────────────────────────────────────────── */
 .lang-switcher {
     display: flex;
-    gap: 0.5em;
+    gap: 0.6em;
     align-items: center;
-    padding: 0.5em 1em;
-    background: #f0f2f4;
-    border-radius: 6px;
-    margin: 1em 0;
-    font-size: 0.9em;
+    flex-wrap: wrap;
+    padding: 0.4em 0;
+    margin-bottom: 1em;
+    font-size: 0.95em;
 }
-.lang-switcher a {
+.lang-switcher a, .lang-switcher .lang-active {
     text-decoration: none;
-    padding: 0.25em 0.6em;
+    padding: 0.3em 0.7em;
     border-radius: 4px;
-    color: #0366d6;
     transition: background 0.15s;
 }
-.lang-switcher a:hover { background: #ddf4ff; }
-.lang-switcher a.active {
+.lang-switcher a {
+    color: #0366d6;
+    border: 1px solid #d0d7de;
+}
+.lang-switcher a:hover {
+    background: #ddf4ff;
+    border-color: #0366d6;
+}
+.lang-switcher .lang-active {
     background: #0366d6;
     color: #fff;
     font-weight: 600;
+    border: 1px solid #0366d6;
 }
 
 /* ── Notebook Cards ─────────────────────────────────────────────────── */
