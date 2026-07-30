@@ -13,8 +13,8 @@ Roots = "f2b01f46-fcfa-551c-844a-d8ac1e96c665"
 
 [compat]
 Glenn = "0.3"
-Pluto = "0.19"
+Pluto = "1"
 Plots = "1"
 DataFrames = "1"
 Roots = "2"
-julia = "1.9"
+julia = "1.10"
