@@ -208,48 +208,6 @@ julia --project scripts/render.jl
 - Glenn.jl: [github.com/ProfLeao/Glenn.jl](https://github.com/ProfLeao/Glenn.jl)
 """)
     end
-
-## About the Data
-
-- `Glenn.jl`'s `h_relative` already includes the enthalpy of formation.
-  Reference-state elements read \$H^\\circ(298.15\\,\\text{K}) \\approx 0\$,
-  compounds read their \$\\Delta_f H^\\circ\$.
-
-- Notebook 04 shows how to obtain \$\\Delta_f H^\\circ\$ from `h_relative`
-  at 298.15 K.
-
----
-
-## $(data["heading"])
-
-<div class="nb-grid">
-$(join(nb_items, "\n"))
-</div>
-
----
-
-## Reproducing
-
-```bash
-julia --project -e 'using Pluto; Pluto.run()'
-```
-
-Generate static HTML:
-
-```bash
-julia --project scripts/render.jl
-```
-
----
-
-## Author
-
-**Dr. Reginaldo G. Leão Jr.** — GESESC / IFMG
-
-- GitHub: [@ProfLeao](https://github.com/ProfLeao)
-- Glenn.jl: [github.com/ProfLeao/Glenn.jl](https://github.com/ProfLeao/Glenn.jl)
-""")
-    end
 end
 
 # ══════════════════════════════════════════════════════════════════════════════
