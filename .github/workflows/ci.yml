@@ -36,7 +36,7 @@ jobs:
         run: |
           julia --project -e '
               using Pkg
-              Pkg.add(["Glenn", "Pluto", "Plots", "DataFrames", "Roots"])
+              Pkg.instantiate()
           '
 
       - name: Validate notebooks
@@ -102,7 +102,7 @@ jobs:
         run: |
           julia --project -e '
               using Pkg
-              Pkg.add(["Glenn", "Pluto", "Plots", "DataFrames", "Roots"])
+              Pkg.instantiate()
           '
 
       - name: Render notebooks to HTML

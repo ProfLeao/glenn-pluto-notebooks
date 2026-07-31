@@ -1,6 +1,9 @@
 # Pluto notebook state files
 *.jl.*.pluto_state
 
+# Backup files
+*backup*
+
 # Julia compiled files
 *.jl.cov
 *.jl.mem

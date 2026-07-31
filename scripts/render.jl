@@ -35,7 +35,7 @@ function render_all()
             continue
         end
 
-        notebook_files = sort(filter(f -> endswith(f, ".jl"), readdir(src_dir)))
+        notebook_files = sort(filter(f -> endswith(f, ".jl") && !contains(f, "backup"), readdir(src_dir)))
 
         if isempty(notebook_files)
             @warn "No notebooks found in $src_dir"
